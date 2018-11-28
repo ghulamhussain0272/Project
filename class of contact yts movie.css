@@ -1,15 +1,11 @@
 .row
 {
-    height: 15vh;
+    height: 11vh;
 }
 *{
     padding: 0px;
     margin: 0px;
 
-}
-body
-{
-    background-image: url("backgroud_xl.jpg");
 }
 @media screen and (min-width:1200px)
 {
