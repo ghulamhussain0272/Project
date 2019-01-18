@@ -1,3 +1,29 @@
+<?php
+require "../server/db_connection.php";
+//movies insertion into table
+if(isset($_POST['insert_movie']))
+{
+    $moviename=$_POST['movie_title'];
+    $movieaddress=$_POST['movie_link'];
+    $movieyear=$_POST['movie_year'];
+
+    $movieimage = $_FILES['movie_img']['name'];
+    $movieimage_tmp = $_FILES['movie_img']['tmp_name'];
+    move_uploaded_file($movieimage_tmp,"movie_images/$movieimage");
+
+    $insert_query="insert into movies(movie_name,movie_image,movie_link,movie_year) 
+                   values ('$moviename','$movieimage','$movieaddress','$movieyear')";
+
+    $insertmovie=mysqli_query($con,$insert_query);
+    if($insertmovie){
+        header("location: ".$_SERVER['PHP_SELF']);
+
+    }
+
+}
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +43,7 @@
 <body>
 <div class="container">
     <h1 class="text-center my-4"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Add New </span> Movies</h1>
-    <form>
+    <form method="post">
         <div class="row">
               <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
                 <label for="movie_title" class="float-md-right"> <span class="d-sm-none d-md-inline"> Movie </span> Title:</label>
