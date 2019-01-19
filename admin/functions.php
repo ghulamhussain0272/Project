@@ -13,6 +13,15 @@ function display_Movies(){
     $result=mysqli_query($con,$getMovieQuery);
     echo "<table border='1' align='center'>";
     echo "<tr> <td colspan='12' align='center'><h1><b>Movies</b></h1></td></tr>";
+    echo"<tr>
+              <td align='center'> <b>Movie_ID</b></td>
+              <td colspan='3' align='center'> <b>Movie_Name</b></td>
+              <td align='center'><b>Movie_Year</b></td>
+              <td colspan='3' align='center'><b>Movie_Link</b></td>
+              <td colspan='2' align='center'><b>Movie_Image</b></td>
+              <td align='center'><b>Edit</b></td>
+              <td align='center'><b>Delete</b></td>
+        </tr>";
     while($row=mysqli_fetch_assoc($result))
     {
         $movietitle=$row['movie_name'];
