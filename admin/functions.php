@@ -12,7 +12,7 @@ function display_Movies(){
     $getMovieQuery="select * from movies";
     $result=mysqli_query($con,$getMovieQuery);
     echo "<table border='1' align='center'>";
-    echo "<tr> <td colspan='10' align='center'><h1><b>Movies</b></h1></td></tr>";
+    echo "<tr> <td colspan='12' align='center'><h1><b>Movies</b></h1></td></tr>";
     while($row=mysqli_fetch_assoc($result))
     {
         $movietitle=$row['movie_name'];
@@ -29,6 +29,8 @@ function display_Movies(){
               <td><b>$movieyear</b></td>
               <td colspan='3'><b>$movielink</b></td>
               <td colspan='2'><b>$movieimage</b></td>
+              <td> <button   type=\"submit\" name=\"edit\" class=\"btn btn-primary btn-block\"><i class=\"fas fa-plus\"></i> Edit </button></td>
+              <td> <button   type=\"submit\" name=\"delete\" class=\"btn btn-primary btn-block\"><i class=\"fas fa-plus\"></i> Delete </button></td>
               </tr>
               
               ";
