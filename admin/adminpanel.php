@@ -17,7 +17,6 @@ if(isset($_POST['insert_movie']))
     $insertmovie=mysqli_query($con,$insert_query);
     if($insertmovie){
         header("location: ".$_SERVER['PHP_SELF']);
-
     }
 
 }
@@ -43,7 +42,7 @@ if(isset($_POST['insert_movie']))
 <body>
 <div class="container">
     <h1 class="text-center my-4"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Add New </span> Movies</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <div class="row">
               <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
                 <label for="movie_title" class="float-md-right"> <span class="d-sm-none d-md-inline"> Movie </span> Title:</label>
