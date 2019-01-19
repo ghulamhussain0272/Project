@@ -47,5 +47,4 @@ function display_Movies(){
     }
     echo "</table>";
 }
-
 ?>
