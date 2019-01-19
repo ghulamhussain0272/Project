@@ -10,6 +10,5 @@ $con = mysqli_connect("localhost","root","","entertainment");
 if(!$con)
     die("Connection failed");
 
-
 ?>
 

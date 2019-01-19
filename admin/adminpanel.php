@@ -1,6 +1,7 @@
 <?php
 require "../server/db_connection.php";
 include "functions.php";
+session_start();
 //movies insertion into table
 if(isset($_POST['insert_movie']))
 {
@@ -19,9 +20,13 @@ if(isset($_POST['insert_movie']))
     if($insertmovie){
         header("location: ".$_SERVER['PHP_SELF']);
     }
-
 }
-
+if(isset($_POST['edit']))
+{
+    $movieid=$_POST['edit'];
+    $_SESSION['edit']=$movieid;
+    header("location:editpage.php");
+}
 ?>
 
 
