@@ -1,5 +1,6 @@
 <?php
 require "../server/db_connection.php";
+include "functions.php";
 //movies insertion into table
 if(isset($_POST['insert_movie']))
 {
@@ -102,17 +103,9 @@ if(isset($_POST['insert_movie']))
             </div>
 
             <div class="row my-5">
-                <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
-                <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
-                    <button type="button" name="update_movie" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Edit </button>
-                </div>
-            </div>
-                <div class="row my-6">
-                <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
-                <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
-                    <button type="button" name="delete_movie" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Delete </button>
-                </div>
-            </div>
+                <?php
+                display_Movies();
+                ?>
 
     </form>
 </div>
