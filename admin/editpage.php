@@ -78,7 +78,7 @@ if(!isset($_SESSION['edit']))
                 <label for="movie_title" class="float-md-right">
 
                     <?php
-                    echo $dataFetch['movie_link'];
+                    echo  $dataFetch['movie_link'];
                     ?>
                 </label>
             </div>
