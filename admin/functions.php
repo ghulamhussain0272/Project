@@ -5,7 +5,7 @@
  * Date: 1/19/2019
  * Time: 8:21 PM
  */
-require "../server/db_connection.php";
+include "../server/db_connection.php";
 //display movie table data from database
 function display_Movies(){
     global $con;
@@ -46,5 +46,32 @@ function display_Movies(){
 
     }
     echo "</table>";
+}
+
+function displaymovies()
+{
+    global $con;
+    $getMovieQuery="select * from movies";
+    $result=mysqli_query($con,$getMovieQuery);
+    while($row=mysqli_fetch_assoc($result))
+    {
+        $movietitle=$row['movie_name'];
+        $movieyear=$row['movie_year'];
+        $movielink=$row['movie_link'];
+        $movieimage=$row['movie_image'];
+        $movieid=$row['movie_id'];
+
+        echo "
+            <div class=\"column col-lg-4 col-md-6 col-sm-12\">
+                    <h5 class='text-capitalize'>$movietitle</h5>
+                    <a href=$movielink>
+                    <img src='admin/movie_images/$movieimage' width='250' height='250'>
+                    </a>
+                    <p> <b> Year $movieyear </b> </p>
+                    
+           </div>
+        ";
+
+    }
 }
 ?>

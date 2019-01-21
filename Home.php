@@ -1,3 +1,9 @@
+<?php
+
+include "admin/functions.php";
+include "./server/db_connection.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +26,7 @@
     </div>
     <div class="header col-lg-12 col-md-12 col-sm-12">
     <div  class="header-left">
-        <a href="Home.html">Home</a>
+        <a href="Home.php">Home</a>
         <a href="YTS%20contact.html">Contact us</a>
         <a href="about_us.html">About us</a>
         <a href="Login_form.html">Login</a>
@@ -30,27 +36,9 @@
 <hr>
     <h2>Trailers</h2>
     <div class="row" >
-        <div class="column col-lg-4 col-md-6 col-sm-12">
-           <a href="https://www.youtube.com/watch?v=QZ40WlshNwU">
-               <img src="images/Salt.jpg" width="250" height="250"><br>
-               <h3>Salt</h3>
-           </a>
-
-        </div>
-        <div class="column col-lg-4 col-md-6 col-sm-12">
-            <a href="https://www.youtube.com/watch?v=wPxqcq6Byq0">
-                <img src="images/sultan.jpg" width="250" height="250"><br>
-                <h3>Sultan</h3>
-            </a>
-
-        </div>
-        <div  class="column col-lg-4 col-md-6 col-sm-12">
-            <a href="https://www.youtube.com/watch?v=x_7YlGv9u1g">
-                <img src="images/dangal.jpg" width="250" height="250"><br>
-                <h3>Dangal</h3>
-            </a>
-
-        </div>
+        <?php
+        displaymovies();
+        ?>
     </div>
 <div class="col-lg-12 col-md-12 col-sm-12">
 <p>
