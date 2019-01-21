@@ -2,14 +2,14 @@
 require "../server/db_connection.php";
 include "functions.php";
 session_start();
-
+//update
 if(isset($_POST['edit']))
 {
     $movieid=$_POST['edit'];
     $_SESSION['edit']=$movieid;
     header("location:editpage.php");
 }
-
+//delete
 if(isset($_POST['delete']))
 {
     $movieid=$_POST['delete'];
