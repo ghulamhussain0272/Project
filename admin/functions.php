@@ -39,7 +39,7 @@ function display_Movies(){
               <td colspan='3'><b>$movielink</b></td>
               <td colspan='2'><b>$movieimage</b></td>
              <td> <button   type=\"submit\" name=\"edit\" value='$movieid' class=\"btn btn - primary btn - block\"><i class=\"fas fa - plus\"></i> Edit </button></td>
-              <td> <button   type=\"submit\" name=\"delete\" class=\"btn btn - primary btn - block\"><i class=\"fas fa - plus\"></i> Delete </button></td>
+              <td> <button   type=\"submit\" name=\"delete\"value='$movieid' class=\"btn btn - primary btn - block\"><i class=\"fas fa - plus\"></i> Delete </button></td>
               </tr>
               
               ";
