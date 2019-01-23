@@ -112,6 +112,7 @@ if(isset($_POST['edit']))
                 display_Movies();
                 ?>
 
+
     </form>
 </div>
 </body>

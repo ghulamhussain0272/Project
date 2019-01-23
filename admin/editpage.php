@@ -154,24 +154,24 @@ if(isset($_POST['submitBtn']))
 {
     $title=$_POST['title'];
     $id=$_SESSION['edit'];
-    if(isset($title))
+    if($title!='')
     {
         $query="UPDATE `movies` SET `movie_name`='$title' WHERE movie_id='$id'";
         $connected=mysqli_query($con,$query);
     }
     $link=$_POST['link'];
-    if($link!=NULL)
+    if($link!="")
     {
         $query="UPDATE `movies` SET `movie_link`='$link' WHERE movie_id='$id'";
         $connected=mysqli_query($con,$query);
     }
     $year=$_POST['year'];
-    if($year!=NULL)
+    if($year!="")
     {
         $query="UPDATE `movies` SET `movie_year`='$year' WHERE movie_id='$id'";
         $connected=mysqli_query($con,$query);
     }
-    if(isset($_FILES['image']['name']))
+    if($_FILES['image']['name']!="")
     {
         $imagename = $_FILES['image']['name'];
         $tempImageName = $_FILES['image']['tmp_name'];
@@ -179,8 +179,15 @@ if(isset($_POST['submitBtn']))
 
         $query = "UPDATE `movies` SET `movie_image`='$imagename' WHERE movie_id='$id'";
         mysqli_query($con, $query);
+
     }
-    //header("location:adminpanel.php");
-    //session_destroy("edit");
+    ?>
+
+    <script>
+
+    window.open('adminpanel.php','_self');//redirect that page by using javaScript
+    </script>
+
+    <?php
 }
 ?>

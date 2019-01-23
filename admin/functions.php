@@ -43,6 +43,7 @@ function display_Movies(){
               </tr>
               ";
 
+
     }
     echo "</table>";
 }
