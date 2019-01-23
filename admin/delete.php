@@ -1,22 +1,24 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: shahzadmiraj
- * Date: 20/01/2019
- * Time: 1:28 AM
+ * User: Ghulam Hussain
+ * Date: 1/21/2019
+ * Time: 8:54 PM
  */
 include_once "../server/db_connection.php";
 //include_once "functions.php";
 session_start();
-if(!isset($_SESSION['edit']))
+if(!isset($_SESSION['delete']))
 {
     header("location:adminpanel.php");
     //exit();
 }
+
+
 ?>
 <html>
 <head>
-    <title>Editing page</title>
+    <title>Delete page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.css">
@@ -37,7 +39,7 @@ if(!isset($_SESSION['edit']))
 </head>
 <body>
 <div class="container border">
-    <h1 class="text-center my-4 btn-danger"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Edit </span> Movies</h1>
+    <h1 class="text-center my-4 btn-danger"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Delete </span> Movies</h1>
     <div class="w-100">
     <form method="post" enctype="multipart/form-data">
     <div class="row">
@@ -48,7 +50,7 @@ if(!isset($_SESSION['edit']))
             <label for="movie_title" class="float-md-right">
 
                 <?php
-                $id=$_SESSION['edit'];
+                $id=$_SESSION['delete'];
                 $query1="SELECT * FROM movies WHERE movie_id=$id";
                 $connected=mysqli_query($con,$query1);
                 $dataFetch=mysqli_fetch_assoc($connected);
@@ -57,14 +59,6 @@ if(!isset($_SESSION['edit']))
                 ?>
 
             </label>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 d-block">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
-                </div>
-                <input type="text" class="form-control" id="movie_title" name="title" placeholder="Enter Movie Title" >
-            </div>
         </div>
     </div>
 
@@ -82,14 +76,6 @@ if(!isset($_SESSION['edit']))
                     ?>
                 </label>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 d-block">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
-                    </div>
-                    <input type="text" class="form-control" id="movie_title" name="link" placeholder="Enter Movie link" >
-                </div>
-            </div>
         </div>
 
 
@@ -106,14 +92,7 @@ if(!isset($_SESSION['edit']))
                     ?>
                 </label>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 d-block">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
-                    </div>
-                    <input type="text" class="form-control" id="movie_title" name="year" placeholder="Enter Movie year" >
-                </div>
-            </div>
+
         </div>
 
 
@@ -129,18 +108,13 @@ if(!isset($_SESSION['edit']))
                     ?>
                 </label>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 d-block">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
-                    </div>
-                    <input type="file" class="form-control" id="movie_title" name="image" placeholder="Enter Movie Title" >
-                </div>
-            </div>
+
         </div>
         <div class="d-block " align="center">
-
-            <input type="submit" name="submitBtn" class="btn-success col-4" id="BUTTON">
+            <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
+            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
+            <button type="submit" name="delete_movie" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Delete </button>
+            </div>
         </div>
     </form>
     </div>
@@ -149,45 +123,11 @@ if(!isset($_SESSION['edit']))
 </html>
 
 <?php
-
-if(isset($_POST['submitBtn']))
+if(isset($_POST['delete_movie']))
 {
-    $title=$_POST['title'];
-    $id=$_SESSION['edit'];
-    if($title!='')
-    {
-        $query="UPDATE `movies` SET `movie_name`='$title' WHERE movie_id='$id'";
-        $connected=mysqli_query($con,$query);
-    }
-    $link=$_POST['link'];
-    if($link!="")
-    {
-        $query="UPDATE `movies` SET `movie_link`='$link' WHERE movie_id='$id'";
-        $connected=mysqli_query($con,$query);
-    }
-    $year=$_POST['year'];
-    if($year!="")
-    {
-        $query="UPDATE `movies` SET `movie_year`='$year' WHERE movie_id='$id'";
-        $connected=mysqli_query($con,$query);
-    }
-    if($_FILES['image']['name']!="")
-    {
-        $imagename = $_FILES['image']['name'];
-        $tempImageName = $_FILES['image']['tmp_name'];
-        move_uploaded_file($tempImageName, "../images/$imagename");
-
-        $query = "UPDATE `movies` SET `movie_image`='$imagename' WHERE movie_id='$id'";
-        mysqli_query($con, $query);
-
-    }
-    ?>
-
-    <script>
-
-    window.open('adminpanel.php','_self');//redirect that page by using javaScript
-    </script>
-
-    <?php
+    $id=$_SESSION['delete'];
+    $q="delete from movies where movie_id='$id'";
+    $connected=mysqli_query($con,$q);
+    header("location:adminpanel.php");
 }
 ?>

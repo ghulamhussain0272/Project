@@ -2,6 +2,20 @@
 require "../server/db_connection.php";
 include "functions.php";
 session_start();
+//update
+if(isset($_POST['edit']))
+{
+    $movieid=$_POST['edit'];
+    $_SESSION['edit']=$movieid;
+    header("location:editpage.php");
+}
+//delete
+if(isset($_POST['delete']))
+{
+    $movieid=$_POST['delete'];
+    $_SESSION['delete']=$movieid;
+    header("location:delete.php");
+}
 //movies insertion into table
 if(isset($_POST['insert_movie']))
 {
@@ -21,12 +35,7 @@ if(isset($_POST['insert_movie']))
         header("location: ".$_SERVER['PHP_SELF']);
     }
 }
-if(isset($_POST['edit']))
-{
-    $movieid=$_POST['edit'];
-    $_SESSION['edit']=$movieid;
-    header("location:editpage.php");
-}
+
 ?>
 
 
@@ -37,6 +46,7 @@ if(isset($_POST['edit']))
     <title>Insert Movies</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
     <style>
@@ -58,7 +68,8 @@ if(isset($_POST['edit']))
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
                     </div>
-                    <input type="text" class="form-control" id="movie_title" name="movie_title" placeholder="Enter Movie Title" >
+                    <input type="text" class="form-control" id="movie_title" name="movie_title" placeholder="Enter Movie Title">
+                    <!--required pattern="^[A-za-z].*$"-->
                 </div>
             </div>
 
@@ -71,7 +82,8 @@ if(isset($_POST['edit']))
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
                         </div>
-                        <input type="text" class="form-control" id="movie_link" name="movie_link" placeholder="Enter Movie Link" >
+                        <input type="text" class="form-control" id="movie_link" name="movie_link" placeholder="Enter Movie Link">
+                        <!--required pattern=".+"-->
                     </div>
                 </div>
         </div>
@@ -85,6 +97,7 @@ if(isset($_POST['edit']))
                             <div class="input-group-text"><i class="fas fa-money-bill"></i></div>
                         </div>
                         <input class="form-control" id="movie_year" name="movie_year" placeholder="Enter Movie Year">
+                        <!--required pattern="^\d{4}$"-->
                     </div>
                 </div>
                 <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
@@ -96,6 +109,7 @@ if(isset($_POST['edit']))
                             <div class="input-group-text"><i class="far fa-image"></i></div>
                         </div>
                         <input class="form-control" type="file" id="movie_img" name="movie_img">
+                     <!--   required pattern=".+\.png|.+\.jpg"-->
                     </div>
                 </div>
             </div>
