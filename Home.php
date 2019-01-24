@@ -1,8 +1,12 @@
 <?php
 
-
+session_start();
 include_once "server/db_connection.php";
 include_once "admin/functions.php";
+
+if(!isset($_SESSION['email'])){
+    header('location: Login_form.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,9 +32,10 @@ include_once "admin/functions.php";
     <div class="header col-lg-12 col-md-12 col-sm-12">
     <div  class="header-left">
         <a href="Home.php">Home</a>
-        <a href="YTS%20contact.html">Contact us</a>
-        <a href="about_us.html">About us</a>
-        <a href="Login_form.html">Login</a>
+        <a href="YTS%20contact.php">Contact us</a>
+        <a href="about_us.php">About us</a>
+       <!-- <a href="Login_form.php">Login</a>-->
+
     </div>
     </div>
 </div>
@@ -66,8 +71,9 @@ include_once "admin/functions.php";
 
 </div>
     <div class="footer">
-        <a href="about_us.html">About_us</a>
+        <a href="about_us.php">About_us</a>
         <a href="Contact_form.html">Contact_us</a>
+        <a href="logout.php">Logout</a>
     </div>
 </div>
 

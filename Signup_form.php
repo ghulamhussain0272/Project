@@ -1,3 +1,27 @@
+<?php
+
+include_once "server/db_connection.php";
+
+if(isset($_GET['signup']))
+{
+    $fname=$_GET['firstname'];
+    $lname=$_GET['lastname'];
+    $email=$_GET['email'];
+    $password=$_GET['psw'];
+    $gender=$_GET['gender'];
+    $birthday=$_GET['birthday'];
+    $insert_query="insert into signup(user_Firstname,user_Lastname,user_Email,user_Password,user_birthday,user_Gender)
+     values('$fname','$lname','$email','$password','$birthday','$gender')";
+
+
+    $insertSignup=mysqli_query($con,$insert_query);
+    if($insertSignup){
+        header("location:Home.php");
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,18 +41,18 @@
         <div class="col-lg-12">
             <img src="images/movie@.jpg" width="100" height="80">
         </div>
-        <div class="header col-lg-12">
+        <!--<div class="header col-lg-12">
             <div class="header-left">
                 <a href="Home.php">Home</a>
-                <a href="Contact_form.html">Contact_us</a>
+                <a href="YTS%20contact.php">Contact_us</a>
                 <a href="#about">About_us</a>
-                <a href="Login_form.html">Login</a>
+                <a href="Login_form.php">Login</a>
             </div>
 
-        </div>
+        </div>-->
     </div>
     <hr>
-    <form action="action_page.php">
+    <form method="get">
 
         <h1>
             Sign Up
@@ -37,31 +61,29 @@
         <hr>
 
         <label for="firstname"><b>Firstname</b></label>
-        <input type="text" placeholder="Enter Firstname" name="firstname" required>
+        <input type="text" id="firstname" placeholder="Enter Firstname" name="firstname" required>
 
         <label for="lastname"><b>Lastname</b></label>
-        <input type="text" placeholder="Enter Lastname" name="lastname" required>
+        <input type="text" id="lastname" placeholder="Enter Lastname" name="lastname" required>
 
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+        <input type="text" id="email" placeholder="Enter Email" name="email" required>
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
 
-        <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
         <b>Select Gender:</b><br>
         <label for="male">Male</label>
-        <input type="radio" name="gender" id="male" value="male" checked>
+        <input type="radio" name="gender"  value="male">
         <br>
         <label for="female">Female</label>
-        <input type="radio" name="gender" id="female" value="female">
+        <input type="radio" name="gender"  value="female">
         <br>
         <br>
 
         <label for="birthday"><b>Birthday</b></label>
-        <input type="date" name="birthday"><br><br>
+        <input type="text" id="birthday" name="birthday"><br><br>
         <label>
             <input type="checkbox" checked="checked" name="remember"
                    style="margin-bottom:15px"> Remember me
@@ -70,8 +92,8 @@
         <p>By Creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a> </p>
 
         <div class="clearfix">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="cancelbtn">Sign Up</button>
+            <button type="submit" name="cancelbtn" class="cancelbtn">Cancel</button>
+            <button type="submit" name="signup" class="cancelbtn">Sign Up</button>
         </div>
 
 

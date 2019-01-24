@@ -1,3 +1,12 @@
+<?php
+
+if(!isset($_SESSION['email'])){
+    header('location: Login_form.php');
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +39,8 @@
                 <div  class="header-left">
                     <a href="Home.php">Home</a>
                     <a href="YTS%20contact.html">Contact us</a>
-                    <a href="about_us.html">About us</a>
-                    <a href="Login_form.html">Login</a>
+                    <a href="about_us.php">About us</a>
+                    <!--<a href="Login_form.php">Login</a>-->
                 </div>
             </div>
             </div>

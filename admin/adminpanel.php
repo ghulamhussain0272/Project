@@ -2,6 +2,7 @@
 //include "../server/db_connection.php";
 
 session_start();
+
 include_once "functions.php";
 //update
 if(isset($_POST['edit']))
@@ -70,7 +71,6 @@ if(isset($_POST['insert_movie']))
                         <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
                     </div>
                     <input type="text" class="form-control" id="movie_title" name="movie_title" placeholder="Enter Movie Title">
-                    <!--required pattern="^[A-za-z].*$"-->
                 </div>
             </div>
 
