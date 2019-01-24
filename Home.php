@@ -1,7 +1,8 @@
 <?php
 
-include "admin/functions.php";
-include "./server/db_connection.php";
+
+include_once "server/db_connection.php";
+include_once "admin/functions.php";
 ?>
 
 <!DOCTYPE html>

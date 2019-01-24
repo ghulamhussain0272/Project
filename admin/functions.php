@@ -5,7 +5,7 @@
  * Date: 1/19/2019
  * Time: 8:21 PM
  */
-include "../server/db_connection.php";
+include_once "db_connection.php";
 //display movie table data from database
 function display_Movies(){
     global $con;

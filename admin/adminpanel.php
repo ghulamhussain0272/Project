@@ -1,7 +1,8 @@
 <?php
-require "../server/db_connection.php";
-include "functions.php";
+//include "../server/db_connection.php";
+
 session_start();
+include_once "functions.php";
 //update
 if(isset($_POST['edit']))
 {
