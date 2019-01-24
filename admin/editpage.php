@@ -4,6 +4,16 @@
  * User: shahzadmiraj
  * Date: 20/01/2019
  * Time: 1:28 AM
+ *
+ *
+?>
+
+<script>
+
+window.open('adminpanel.php','_self');//redirect that page by using javaScript
+</script>
+
+<?php
  */
 include_once "../server/db_connection.php";
 //include_once "functions.php";
@@ -13,6 +23,42 @@ if(!isset($_SESSION['edit']))
     header("location:adminpanel.php");
     //exit();
 }
+
+if(isset($_POST['submitBtn']))
+{
+    $title=$_POST['title'];
+    $id=$_SESSION['edit'];
+    if($title!='')
+    {
+        $query="UPDATE `movies` SET `movie_name`='$title' WHERE movie_id='$id'";
+        $connected=mysqli_query($con,$query);
+    }
+    $link=$_POST['link'];
+    if($link!="")
+    {
+        $query="UPDATE `movies` SET `movie_link`='$link' WHERE movie_id='$id'";
+        $connected=mysqli_query($con,$query);
+    }
+    $year=$_POST['year'];
+    if($year!="")
+    {
+        $query="UPDATE `movies` SET `movie_year`='$year' WHERE movie_id='$id'";
+        $connected=mysqli_query($con,$query);
+    }
+    if($_FILES['image']['name']!="")
+    {
+        $imagename = $_FILES['image']['name'];
+        $tempImageName = $_FILES['image']['tmp_name'];
+        move_uploaded_file($tempImageName, "../images/$imagename");
+
+        $query = "UPDATE `movies` SET `movie_image`='$imagename' WHERE movie_id='$id'";
+        mysqli_query($con, $query);
+
+    }
+    header("location:adminpanel.php");
+}
+
+
 ?>
 <html>
 <head>
@@ -148,39 +194,3 @@ if(!isset($_SESSION['edit']))
 </body>
 </html>
 
-<?php
-
-if(isset($_POST['submitBtn']))
-{
-    $title=$_POST['title'];
-    $id=$_SESSION['edit'];
-    if(isset($title))
-    {
-        $query="UPDATE `movies` SET `movie_name`='$title' WHERE movie_id='$id'";
-        $connected=mysqli_query($con,$query);
-    }
-    $link=$_POST['link'];
-    if($link!=NULL)
-    {
-        $query="UPDATE `movies` SET `movie_link`='$link' WHERE movie_id='$id'";
-        $connected=mysqli_query($con,$query);
-    }
-    $year=$_POST['year'];
-    if($year!=NULL)
-    {
-        $query="UPDATE `movies` SET `movie_year`='$year' WHERE movie_id='$id'";
-        $connected=mysqli_query($con,$query);
-    }
-    if(isset($_FILES['image']['name']))
-    {
-        $imagename = $_FILES['image']['name'];
-        $tempImageName = $_FILES['image']['tmp_name'];
-        move_uploaded_file($tempImageName, "../images/$imagename");
-
-        $query = "UPDATE `movies` SET `movie_image`='$imagename' WHERE movie_id='$id'";
-        mysqli_query($con, $query);
-    }
-    //header("location:adminpanel.php");
-    //session_destroy("edit");
-}
-?>

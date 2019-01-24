@@ -127,6 +127,7 @@ if(isset($_POST['insert_movie']))
                 display_Movies();
                 ?>
 
+
     </form>
 </div>
 </body>
