@@ -72,7 +72,7 @@ if(!isset($_SESSION['email'])){
 </div>
     <div class="footer">
         <a href="about_us.php">About_us</a>
-        <a href="Contact_form.html">Contact_us</a>
+        <a href="YTS%20contact.php">Contact_us</a>
         <a href="logout.php">Logout</a>
     </div>
 </div>

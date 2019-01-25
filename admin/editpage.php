@@ -18,6 +18,9 @@ window.open('adminpanel.php','_self');//redirect that page by using javaScript
 include_once "../server/db_connection.php";
 //include_once "functions.php";
 session_start();
+if(!isset($_SESSION['user_email'])){
+    header('location: AdminRights.php?not_admin=You are not Admin!');
+}
 if(!isset($_SESSION['edit']))
 {
     header("location:adminpanel.php");

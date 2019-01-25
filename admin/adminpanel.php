@@ -2,8 +2,16 @@
 //include "../server/db_connection.php";
 
 session_start();
-
+if(!isset($_SESSION['user_email'])){
+    header('location: AdminRights.php?not_admin=You are not Admin!');
+}
 include_once "functions.php";
+
+
+if(isset($_POST['Logout']))
+{
+    header("location:logout.php");
+}
 //update
 if(isset($_POST['edit']))
 {
@@ -126,6 +134,14 @@ if(isset($_POST['insert_movie']))
                 <?php
                 display_Movies();
                 ?>
+            </div>
+        <div class="row my-6">
+            <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
+            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
+                <button type="submit" name="Logout" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Logout </button>
+            </div>
+
+        </div>
 
 
     </form>

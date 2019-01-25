@@ -87,7 +87,7 @@ if(isset($_GET['login'])){
 
 <div class="footer">
     <a href="about_us.php">About us</a>
-    <a href="Contact_form.html">Contact us</a>
+    <a href="YTS%20contact.php">Contact us</a>
     <a href="Signup_form.php">Create new Account</a>
 </div>
 </div>

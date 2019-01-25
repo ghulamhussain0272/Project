@@ -5,9 +5,13 @@
  * Date: 1/21/2019
  * Time: 8:54 PM
  */
+
 include_once "../server/db_connection.php";
 //include_once "functions.php";
 session_start();
+if(!isset($_SESSION['user_email'])){
+    header('location: AdminRights.php?not_admin=You are not Admin!');
+}
 if(!isset($_SESSION['delete']))
 {
     header("location:adminpanel.php");
