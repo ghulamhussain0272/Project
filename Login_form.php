@@ -66,11 +66,13 @@ if(isset($_GET['login'])){
         <div><?php echo $error_msg;?></div>
         <label for="email"><b>Email</b></label>
         <input type="text" id="email" placeholder="Enter Email" name="email"
-               value="<?php echo @$_COOKIE['email']?>" required autofocus>
+               value="<?php echo @$_COOKIE['email']?>"
+               required pattern="^[A-Z a-z]+\d*\@gmail\.com$ | ^[A-Z a-z]+\d*\@ucp\.edu\.pk(\.com)?$">
 
         <label for="psw"><b>Password</b></label>
         <input type="password" id="psw" placeholder="Enter Password" name="psw"
-               value="<?php echo @$_COOKIE['psw']?>" required>
+               value="<?php echo @$_COOKIE['psw']?>"
+               required pattern="^[A-Z a-z]+\d*[A-Z a-z]*$ | ^\d+[A-Z a-z]*\d*[A-Z a-z]*$ |\d*|[a-z A-z]*">
 
     <label>
         <input type="checkbox" checked="checked" name="remember"

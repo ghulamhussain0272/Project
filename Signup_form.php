@@ -34,6 +34,7 @@ if(isset($_GET['signup']))
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/signup-signin.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
@@ -61,29 +62,35 @@ if(isset($_GET['signup']))
         <hr>
 
         <label for="firstname"><b>Firstname</b></label>
-        <input type="text" id="firstname" placeholder="Enter Firstname" name="firstname" required>
+        <input type="text" id="firstname" placeholder="Enter Firstname" name="firstname"
+               required pattern="^[A-Z a-z]+$">
 
         <label for="lastname"><b>Lastname</b></label>
-        <input type="text" id="lastname" placeholder="Enter Lastname" name="lastname" required>
+        <input type="text" id="lastname" placeholder="Enter Lastname" name="lastname"
+               required pattern="^[A-Z a-z]+$">
 
         <label for="email"><b>Email</b></label>
-        <input type="text" id="email" placeholder="Enter Email" name="email" required>
+        <input type="text" id="email" placeholder="Enter Email" name="email"
+               required pattern="^[A-Z a-z]+\d*\@gmail\.com$ | ^[A-Z a-z]+\d*\@ucp\.edu\.pk(\.com)?$">
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
+        <input type="password" id="psw" placeholder="Enter Password" name="psw"
+               required pattern="^[A-Z a-z]+\d*[A-Z a-z]*$ | ^\d+[A-Z a-z]*\d*[A-Z a-z]*$ |\d*|[a-z A-z]*">
 
 
         <b>Select Gender:</b><br>
         <label for="male">Male</label>
-        <input type="radio" name="gender"  value="male">
+        <input type="radio" name="gender"  value="male" required>
         <br>
         <label for="female">Female</label>
-        <input type="radio" name="gender"  value="female">
+        <input type="radio" name="gender"  value="female" required>
         <br>
         <br>
 
         <label for="birthday"><b>Birthday</b></label>
-        <input type="text" id="birthday" name="birthday"><br><br>
+        <input type="text" id="birthday" name="birthday"
+               required pattern="^[0-2]?[0-9]\/[0-1][0-2]\/\d{4}$|
+               ^3[0-1]\/[0-1][0-2]\/\d{4}$|^[0-2]?[0-9]\/0?[1-9]\/\d{4}$"><br><br>
         <label>
             <input type="checkbox" checked="checked" name="remember"
                    style="margin-bottom:15px"> Remember me
@@ -100,7 +107,7 @@ if(isset($_GET['signup']))
     </form>
     <div class="footer">
         <a href="#about">About_us</a>
-        <a href="Contact_form.html">Contact_us</a>
+        <a href="YTS%20contact.php">Contact_us</a>
     </div>
 </div>
 </body>

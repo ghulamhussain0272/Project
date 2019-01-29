@@ -85,7 +85,7 @@ if(!isset($_SESSION['email'])){
 </div>
     <div class="footer">
         <a href="about_us.php">About us</a>
-        <a href="Contact_form.html">Contact us</a>
+        <a href="YTS%20contact.php">Contact us</a>
     </div>
 </div>
 </body>

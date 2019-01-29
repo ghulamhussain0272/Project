@@ -38,7 +38,7 @@ if(!isset($_SESSION['email'])){
             <div class="header col-lg-12 col-md-12 col-sm-12">
                 <div  class="header-left">
                     <a href="Home.php">Home</a>
-                    <a href="YTS%20contact.html">Contact us</a>
+                    <a href="YTS%20contact.php">Contact us</a>
                     <a href="about_us.php">About us</a>
                     <!--<a href="Login_form.php">Login</a>-->
                 </div>
@@ -173,6 +173,9 @@ if(!isset($_SESSION['email'])){
         </form>
 
     </div>
-
+    <div class="footer">
+        <a href="about_us.php">About us</a>
+        <a href="YTS%20contact.php">Contact us</a>
+    </div>
 </body>
 </html>
