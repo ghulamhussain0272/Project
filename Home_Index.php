@@ -14,7 +14,11 @@ include_once "admin/functions.php";
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/signup-signin.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Home</title>
+    <title>Home_Index</title>
+
+    <style>
+        .mySlides {display:none;}
+    </style>
 </head>
 <body>
 
@@ -25,14 +29,29 @@ include_once "admin/functions.php";
     </div>
     <div class="header col-lg-12 col-md-12 col-sm-12">
     <div  class="header-left">
-        <a href="Home.php">Home</a>
+        <a href="Home_Index.php">Home</a>
         <a href="YTS%20contact.php">Contact us</a>
         <a href="about_us.php">About us</a>
         <a href="Login_form.php">Login</a>
-
+        <a href="Signup_form.php">Create Account</a>
     </div>
     </div>
 </div>
+
+    <div  class="row my-1"  align="center"  >
+        <img class="mySlides" src="admin/movie_images/once_upon.jpg" width="1140px" height="400px">
+        <img class="mySlides" src="admin/movie_images/l1.jpg"width="1140px" height="400px">
+        <img class="mySlides" src="admin/movie_images/p2.jpg"  width="1140px" height="400px"">
+        <img class="mySlides" src="admin/movie_images/c1.jpg"  width="1140px" height="400px"">
+        <img class="mySlides" src="admin/movie_images/c2.jpg"  width="1140px" height="400px"">
+        <img class="mySlides" src="admin/movie_images/r2.jpg"  width="1140px" height="400px"">
+        <img class="mySlides" src="admin/movie_images/s1.jpg"  width="1140px" height="400px"">
+
+
+
+    </div>
+
+
 <hr>
     <h2>Trailers</h2>
     <div class="row" >
@@ -71,6 +90,21 @@ include_once "admin/functions.php";
 -->    </div>
 </div>
 
+<script>
+    var myIndex = 0;
+    carousel();
 
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+</script>
 </body>
 </html>
