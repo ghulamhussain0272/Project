@@ -160,9 +160,10 @@ if(isset($_POST['submitBtn']))
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
                     </div>
-                    <input type="text" class="form-control" id="movie_title" name="year" placeholder="Enter Movie year" >
+                    <input type="text" class="form-control" id="years" name="year" placeholder="Enter Movie year" onchange="getTitle(this.value)" >
                 </div>
             </div>
+            <span id="yearCorrection"></span>
         </div>
 
 
@@ -194,6 +195,7 @@ if(isset($_POST['submitBtn']))
     </form>
     </div>
 </div>
+<script src="functionsJs.js"></script>
 </body>
 </html>
 
