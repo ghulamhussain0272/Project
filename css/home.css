@@ -95,7 +95,7 @@ body {
     }
 }
 
-@media screen and(max-width: 768px){
+@media screen and (max-width: 768px){
     .column{
         width: 50%;
         float: left;
@@ -103,7 +103,7 @@ body {
     }
 }
 
-@media screen and(max-width: 992px){
+@media screen and (max-width: 992px){
     .column{
         width: 25%;
         float: left;

@@ -20,10 +20,9 @@ if(!isset($_SESSION['email'])){
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/signup-signin.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animation.css">
     <title>Home</title>
-    <style>
-        .mySlides {display:none;}
-    </style>
+
 </head>
 <body>
 
@@ -44,15 +43,13 @@ if(!isset($_SESSION['email'])){
 </div>
 
     <div  class="row my-1"  align="center"  >
-        <img class="mySlides" src="admin/movie_images/once_upon.jpg" width="1140px" height="400px">
-        <img class="mySlides" src="admin/movie_images/l1.jpg"width="1140px" height="400px">
-        <img class="mySlides" src="admin/movie_images/p2.jpg"  width="1140px" height="400px"">
-        <img class="mySlides" src="admin/movie_images/c1.jpg"  width="1140px" height="400px"">
-        <img class="mySlides" src="admin/movie_images/c2.jpg"  width="1140px" height="400px"">
-        <img class="mySlides" src="admin/movie_images/r2.jpg"  width="1140px" height="400px"">
-        <img class="mySlides" src="admin/movie_images/s1.jpg"  width="1140px" height="400px"">
-
-
+        <img class="mySlides animationslide" src="admin/movie_images/once_upon.jpg" >
+        <img class="mySlides animationslide" src="admin/movie_images/l1.jpg">
+        <img class="mySlides animationslide" src="admin/movie_images/p2.jpg">
+        <img class="mySlides animationslide" src="admin/movie_images/c1.jpg">
+        <img class="mySlides animationslide" src="admin/movie_images/c2.jpg">
+        <img class="mySlides animationslide" src="admin/movie_images/r2.jpg">
+        <img class="mySlides animationslide" src="admin/movie_images/s1.jpg">
 
     </div>
     <hr>
@@ -108,6 +105,5 @@ if(!isset($_SESSION['email'])){
         setTimeout(carousel, 2000); // Change image every 2 seconds
     }
 </script>
-
 </body>
 </html>

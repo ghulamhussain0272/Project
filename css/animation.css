@@ -1,0 +1,56 @@
+
+
+
+.mySlides {display:none;}
+
+.animationslide {
+    width:1140px ;
+    height:400px;
+}
+
+
+@media screen and (max-width:500px){
+    .animationslide {
+        width:480px ;
+        height:300px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .animationslide {
+        width:480px ;
+        height:300px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .animationslide {
+        width:540px ;
+        height:300px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .animationslide {
+        width:720px;
+        height:400px;
+    }
+}
+
+
+
+@media screen and (min-width: 992px) {
+    .animationslide {
+        width:960px ;
+        height:400px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .animationslide {
+        width:1140px ;
+        height:400px;
+    }
+}
+

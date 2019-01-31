@@ -14,11 +14,10 @@ include_once "admin/functions.php";
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/signup-signin.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animation.css">
     <title>Home_Index</title>
 
-    <style>
-        .mySlides {display:none;}
-    </style>
+
 </head>
 <body>
 
@@ -34,21 +33,19 @@ include_once "admin/functions.php";
         <a href="about_us.php">About us</a>
         <a href="Login_form.php">Login</a>
         <a href="Signup_form.php">Create Account</a>
+
     </div>
     </div>
 </div>
 
     <div  class="row my-1"  align="center"  >
-        <img class="mySlides" src="admin/movie_images/once_upon.jpg" width="1140px" height="400px">
-        <img class="mySlides" src="admin/movie_images/l1.jpg"width="1140px" height="400px">
-        <img class="mySlides" src="admin/movie_images/p2.jpg"  width="1140px" height="400px"">
-        <img class="mySlides" src="admin/movie_images/c1.jpg"  width="1140px" height="400px"">
-        <img class="mySlides" src="admin/movie_images/c2.jpg"  width="1140px" height="400px"">
-        <img class="mySlides" src="admin/movie_images/r2.jpg"  width="1140px" height="400px"">
-        <img class="mySlides" src="admin/movie_images/s1.jpg"  width="1140px" height="400px"">
-
-
-
+        <img class="mySlides animationslide" src="admin/movie_images/once_upon.jpg" >
+        <img class="mySlides animationslide" src="admin/movie_images/l1.jpg">
+        <img class="mySlides animationslide" src="admin/movie_images/p2.jpg">
+        <img class="mySlides animationslide" src="admin/movie_images/c1.jpg">
+        <img class="mySlides animationslide" src="admin/movie_images/c2.jpg">
+        <img class="mySlides animationslide" src="admin/movie_images/r2.jpg">
+        <img class="mySlides animationslide" src="admin/movie_images/s1.jpg">
     </div>
 
 
@@ -89,7 +86,6 @@ include_once "admin/functions.php";
 <!--        <a href="logout.php">Logout</a>
 -->    </div>
 </div>
-
 <script>
     var myIndex = 0;
     carousel();
