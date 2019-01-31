@@ -106,7 +106,7 @@ if(isset($_GET['signup']))
 
     </form>
     <div class="footer">
-        <a href="#about">About_us</a>
+        <a href="about_us.php">About_us</a>
         <a href="YTS%20contact.php">Contact_us</a>
     </div>
 </div>

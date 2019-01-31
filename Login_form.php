@@ -78,8 +78,8 @@ if(isset($_GET['login'])){
         <input type="checkbox" checked="checked" name="remember"
                style="margin-bottom:15px"> Remember me
     </label>
-    <a href="Forget_password.html">Forget Password?</a>
-
+<!--    <a href="Forget_password.html">Forget Password?</a>
+-->
         <div class="clearfix">
             <button type="submit" name="login" class="cancelbtn">Login</button>
         </div>
