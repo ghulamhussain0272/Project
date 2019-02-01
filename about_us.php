@@ -39,7 +39,7 @@ if(!isset($_SESSION['email'])){
         <a href="https://www.facebook.com/profile.php?id=100005451975439"><img src="https://scontent.fisb6-1.fna.fbcdn.net/v/t1.0-1/p160x160/15542040_610318672493193_1718615648410623555_n.jpg?_nc_cat=111&_nc_ht=scontent.fisb6-1.fna&oh=55b7296e1853feae8acb0c0468222436&oe=5C71D0E3" alt="Danial Sheikh">     </a>
         <a href="https://www.facebook.com/profile.php?id=100004492625959"><img src="https://scontent.fisb6-1.fna.fbcdn.net/v/t1.0-1/c0.5.160.160/p160x160/46502366_1076633619163049_3439363313320853504_n.jpg?_nc_cat=111&_nc_ht=scontent.fisb6-1.fna&oh=e5a30ddb37ff2695bef1c56e79dc2f8f&oe=5CA61D89" alt="Ghulam Hussain">     </a>
         <a href="https://www.facebook.com/shahzadmirajdin?lst=100003496096342%3A100003629940371%3A1543080628"><img src="https://scontent.fisb6-1.fna.fbcdn.net/v/t1.0-1/p160x160/46522845_1397269900403995_1586233092878630912_n.jpg?_nc_cat=106&_nc_ht=scontent.fisb6-1.fna&oh=cfbd63c436e1d191bdd0ff9920d3bc07&oe=5C699957" alt="Shahzad Miraj">     </a>
-        <a href="#"><img src="https://scontent.fisb6-1.fna.fbcdn.net/v/t1.0-1/p160x160/16142952_1102559433203916_6506811294568660643_n.jpg?_nc_cat=111&_nc_ht=scontent.fisb6-1.fna&oh=72c54a94ea048dbf12e21e43a30a03a2&oe=5C68F495" alt="Faizan Ali">   </a>
+        <a href="https://www.facebook.com/faizz.buddy"><img src="https://scontent.fisb6-1.fna.fbcdn.net/v/t1.0-1/p160x160/16142952_1102559433203916_6506811294568660643_n.jpg?_nc_cat=111&_nc_ht=scontent.fisb6-1.fna&oh=72c54a94ea048dbf12e21e43a30a03a2&oe=5C68F495" alt="Faizan Ali">   </a>
     </div>
     <div class="section">
         <span class="name">Danial Sheikh</span>
