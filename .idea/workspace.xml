@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8892ffa1-298f-4b7e-964e-9965d119e106" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/entertainment .sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Signup_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/Signup_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/editpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/editpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/functionsJs.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/functionsJs.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,6 +83,7 @@
           <entry key="html" value="5" />
           <entry key="js" value="4" />
           <entry key="php" value="49" />
+          <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -94,6 +92,7 @@
           <entry key="HTML" value="5" />
           <entry key="JavaScript" value="4" />
           <entry key="PHP" value="49" />
+          <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -102,7 +101,7 @@
           <entry key="html" value="5" />
           <entry key="js" value="7" />
           <entry key="php" value="2311" />
-          <entry key="txt" value="217" />
+          <entry key="txt" value="220" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -111,7 +110,7 @@
           <entry key="HTML" value="12" />
           <entry key="JavaScript" value="7" />
           <entry key="PHP" value="2303" />
-          <entry key="PLAIN_TEXT" value="217" />
+          <entry key="PLAIN_TEXT" value="220" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -146,11 +145,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/editpage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="164" column="18" selection-start-line="164" selection-start-column="18" selection-end-line="164" selection-end-column="18" />
+            <state relative-caret-position="226">
+              <caret line="180" column="70" lean-forward="true" selection-start-line="180" selection-start-column="70" selection-end-line="180" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/entertainment .sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -274,11 +282,6 @@
               <item name="Project1" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project1" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Project1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project1" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -343,7 +346,7 @@
       <workItem from="1548843048991" duration="5009000" />
       <workItem from="1548923551274" duration="7904000" />
       <workItem from="1548956587054" duration="10764000" />
-      <workItem from="1549017868823" duration="3620000" />
+      <workItem from="1549017868823" duration="3884000" />
     </task>
     <task id="LOCAL-00001" summary="signup form changes">
       <created>1547558427605</created>
@@ -513,11 +516,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548967300699</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="ass">
+      <created>1549021585884</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1549021585884</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82446000" />
+    <option name="totallyTimeSpent" value="82710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -591,7 +601,8 @@
     <MESSAGE value="automatic slideshow" />
     <MESSAGE value="project_pics" />
     <MESSAGE value="responsive animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="responsive animation" />
+    <MESSAGE value="ass" />
+    <option name="LAST_COMMIT_MESSAGE" value="ass" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/bootstrap.css">
@@ -765,8 +776,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/editpage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="164" column="18" selection-start-line="164" selection-start-column="18" selection-end-line="164" selection-end-column="18" />
+        <state relative-caret-position="226">
+          <caret line="180" column="70" lean-forward="true" selection-start-line="180" selection-start-column="70" selection-end-line="180" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/entertainment .sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
         </state>
       </provider>
     </entry>
