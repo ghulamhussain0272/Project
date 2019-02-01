@@ -11,7 +11,8 @@ function display_Movies(){
     global $con;
     $getMovieQuery="select * from movies";
     $result=mysqli_query($con,$getMovieQuery);
-    echo "<table border='1' align='center'>";
+    echo
+    "<table border='1' align='center'>";
     echo "<tr> <td colspan='12' align='center'><h1><b>Movies</b></h1></td></tr>";
     echo"<tr>
               <td align='center'> <b>Movie_ID</b></td>
@@ -32,6 +33,7 @@ function display_Movies(){
 
 
         echo "
+
               <tr>
               <td> <b>$movieid</b></td>
               <td colspan='3'> <b>$movietitle</b></td>
